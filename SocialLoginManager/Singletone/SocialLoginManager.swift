@@ -30,7 +30,6 @@ public class SocialLoginManager: NSObject {
     private var vkontakteSuccessBlock:SocialLoginManagerVkontakteSuccessBlock?;
     private var vkontakteErrorBlock:SocialLoginManagerVkontakteErrorBlock?;
 
-    
     override init() {
         super.init()
         let VKSdkInstance = VKSdk.initializeWithAppId(vkontakteAppID)
@@ -51,7 +50,6 @@ public class SocialLoginManager: NSObject {
     }
     
     public func facebookCurrentToken() -> FBSDKAccessToken! {
-        
         return FBSDKAccessToken.currentAccessToken()
     }
     
@@ -71,7 +69,7 @@ public class SocialLoginManager: NSObject {
             vkontakteSuccessBlock = handler
         }
         if let error = error {
-        vkontakteErrorBlock = error
+            vkontakteErrorBlock = error
         }
         
         VKSdk.wakeUpSession(permissions) { (VKstate, VKerror) -> Void in
@@ -92,9 +90,7 @@ public class SocialLoginManager: NSObject {
         }
     }
 
-    
     public func twitterCurrentSession() -> TWTRAuthSession? {
-        
         return Twitter.sharedInstance().sessionStore.session()
     }
     
@@ -116,7 +112,12 @@ extension SocialLoginManager: VKSdkDelegate {
     }
     
     public func vkSdkUserAuthorizationFailed() {
-        
+        let vkError = VKError(code: 400)
+        vkError.errorMessage = "User Authorization Failed"
+        let error = NSError(vkError: vkError)
+        if let vkontakteErrorBlock = vkontakteErrorBlock {
+            vkontakteErrorBlock(error)
+        }
     }
 }
     
