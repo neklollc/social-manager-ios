@@ -1,39 +1,47 @@
-# social-manager-ios
-SocialManager-iOS
 
-Add SafariServices.framework library into your project
+## SocialManager-iOS 
+(suppoted Facebook, Twitter, Vkontakte)
 
-Vkontakte 
+## How To Get Started
 
-1) SDk http://github.com/VKCOM/vk-ios-sdk
+- [Download SocialManager-iOS](https://github.com/neklollc/social-manager-ios/archive/master.zip) and add your project
+- Add SafariServices.framework into your project. [See guide.](https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html)
 
-	Add VKSdk.framework and VKSdkResources.bundle libraries into your project
+________________________
+## Installation Vkontakte 
 
-	If app use Swift, create Bridging Header (https://bohemianpolymorph.wordpress.com/2014/07/11/manually-adding-a-swift-bridging-header/)
-	with 
-	#import <VKSdk/VKSdk.h>
+###Prepare
 
-2) Create VK App http://vk.com/apps?act=manage. Standalone app
+- [Download SDk](http://github.com/VKCOM/vk-ios-sdk)
+- Add VKSdk.framework and VKSdkResources.bundle into your project
+- If app use Swift, create Bridging Header and add #import <VKSdk/VKSdk.h>. [See guide.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html)
+- [Create VK App](http://vk.com/apps?act=manage). Type - Standalone app
+- Check permissions list in VKPermissions class in framework
 
-3) Info.plist:
-	a) add to CFBundleURLTypes
+###Modify Info.plist
+
+	- add in CFBundleURLTypes 
+	```
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>vk1111111</string>
+			<string>vk1234567</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vk1111111</string>
+				<string>vk1234567</string>
 			</array>
 		</dict>
+	```
 	
-	1111111 - app_ID
+	1234567 - ID application from [VK Developers.](https://vk.com/apps?act=manage)
 	
-	б) add to LSApplicationQueriesSchemes
+	- add in LSApplicationQueriesSchemes
+	```
 		<string>vk</string>
 		<string>vk-share</string>
 		<string>vkauthorize</string>
-		
-	в) add to  NSAppTransportSecurity - NSExceptionDomains
+	```	
+	- add in NSAppTransportSecurity - NSExceptionDomains
+	```
 		<key>vk.com</key>
 		<dict>
 			<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -43,9 +51,10 @@ Vkontakte
 			<key>NSIncludesSubdomains</key>
 			<true/>
 		</dict>
+	```
 		
-3) AppDelegate 
-
+###Modify AppDelegate 
+```
 	//iOS 9 workflow
 	func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
     	VKSdk.processOpenURL(url, fromApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String)
@@ -59,53 +68,67 @@ Vkontakte
     
 		return true;
 	}
-	
-4) in SocialLoginManager class change vkontakteAppID to your appID
+```	
+###Modify SocialLoginManager class 
+
+Change vkontakteAppID to ID application from [VK Developers.](https://vk.com/apps?act=manage)
 
 ________________________
 
-Twitter 
+## Installation Twitter 
 
-1) Use function Twitter in Fabric. Follow the instructions
+At the moment SocialManager-iOS uses Fabric to work with twitter
 
-2) AppDelegate
+###Prepare
+- If you have not used Fablic yet. You should look at [Getting Started](https://docs.fabric.io/ios/fabric/getting-started.html)
+- Use function Twitter in Fabric app. Follow the instructions
 
-	add in applicationdidFinishLaunchingWithOptions method
-	
-		Fabric.with([Twitter.self])
+###Modify AppDelegate
+```
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+	        Fabric.with([Twitter.self])
 
+	        return true
+	}
+```	
 _________________________
 
-Facebook
+## Installation Facebook
 
-Подготовка 
+###Prepare
 
-SDK - https://developers.facebook.com/docs/ios
+- [Download SDk](https://developers.facebook.com/docs/ios) 
+- [Create Facebook App](https://developers.facebook.com/apps/) 
+- Check [permissions list](https://developers.facebook.com/docs/facebook-login/permissions/v2.5)
+- Add FBSDKCoreKit, FBSDKLoginKit, FBSDKShareKit into your project
 
-Add FBSDKCoreKit, FBSDKLoginKit, FBSDKShareKit libraries into your project
+###Modify Info.plist:
 
-1) Create Facebook App https://developers.facebook.com/apps/
-
-2) Info.plist:
-
-	a)Add 
+- create in Info.plist
+```	
 	<key>FacebookAppID</key>
-	<string>111111111111111</string>
+	<string>1234567891234567</string>
 	<key>FacebookDisplayName</key>
 	<string>SocialLoginManager</string>
+```		
+- add in LSApplicationQueriesSchemes
+```	
+	<string>fbauth2</string>
+```	
 	
-	б)add in LSApplicationQueriesSchemes
-		<string>fbauth2</string>
-	
-	в)add in CFBundleURLTypes
+- add in CFBundleURLTypes
+```	
 	<dict>
 		<key>CFBundleURLSchemes</key>
 		<array>
-			<string>fb111111111111111</string>
+			<string>fb1234567891234567</string>
 		</array>
 	</dict>
+```	
 	
-	г)add in NSAppTransportSecurity - NSExceptionDomains
+- add in NSAppTransportSecurity - NSExceptionDomains
+```	
 	<key>facebook.com</key>
 	    <dict>
 	      <key>NSIncludesSubdomains</key> <true/>        
@@ -122,13 +145,12 @@ Add FBSDKCoreKit, FBSDKLoginKit, FBSDKShareKit libraries into your project
 	      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key> <false/>
 	    </dict>
 	  </dict>
-	
+```
 
-111111111111111 - AppID from site
-SocialLoginManager - AppName from site
+1234567891234567, SocialLoginManager - AppID and AppName from [Facebook Developers.](https://developers.facebook.com/apps/)
 
-3) AppDelegate
- 
+###Modify AppDelegate
+```	
 	//iOS 9 workflow
 	func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
     	FBSDKApplicationDelegate.sharedInstance().application(app, openURL: url, sourceApplication: 			options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String, annotation: nil)
@@ -147,8 +169,14 @@ SocialLoginManager - AppName from site
 		FBSDKAppEvents.activateApp()
 	}
 	
-	в applicationdidFinishLaunchingWithOptions добавить метод 
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+		FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+	   	return true
+	}
+```	
 	
-	FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+	
 	
 
