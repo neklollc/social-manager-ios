@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialLoginManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOh-PU-GUa">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Vkontakt"/>
+                                <connections>
+                                    <action selector="vkontakteLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSv-7E-gGg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-ni-XK5">
+                                <rect key="frame" x="20" y="512" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="twitterLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3e9-Sz-83Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-u6-W5a">
+                                <rect key="frame" x="20" y="474" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pK3-Lr-xrG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aoq-u6-W5a" firstAttribute="leading" secondItem="iQq-ni-XK5" secondAttribute="leading" id="AeO-k8-oyf"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="leading" secondItem="wOh-PU-GUa" secondAttribute="leading" id="MvK-vL-SO9"/>
+                            <constraint firstItem="aoq-u6-W5a" firstAttribute="trailing" secondItem="iQq-ni-XK5" secondAttribute="trailing" id="PRG-eh-2L6"/>
+                            <constraint firstAttribute="bottom" secondItem="wOh-PU-GUa" secondAttribute="bottom" constant="20" symbolic="YES" id="V3O-e2-oHb"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YtY-Hf-xt4"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="top" secondItem="aoq-u6-W5a" secondAttribute="bottom" constant="8" symbolic="YES" id="cv8-C9-sha"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="top" secondItem="iQq-ni-XK5" secondAttribute="bottom" constant="8" symbolic="YES" id="eFc-OU-psc"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="trailing" secondItem="wOh-PU-GUa" secondAttribute="trailing" id="tpR-0D-35v"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wOK-gC-A5E"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="287"/>
         </scene>
     </scenes>
 </document>

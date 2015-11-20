@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E120D3881BFDC4B200A339AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3841BFDC4B200A339AC /* Fabric.framework */; };
+		E120D3891BFDC4B200A339AC /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3851BFDC4B200A339AC /* TwitterKit.framework */; };
+		E120D38A1BFDC4B200A339AC /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */; };
+		E120D38B1BFDC4B200A339AC /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3871BFDC4B200A339AC /* TwitterCore.framework */; };
+		E120D38E1BFDC60D00A339AC /* VKSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D38C1BFDC60D00A339AC /* VKSdk.framework */; };
+		E120D38F1BFDC60D00A339AC /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */; };
 		E18503D71BFB15CC00CEF638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503D61BFB15CC00CEF638 /* AppDelegate.swift */; };
 		E18503D91BFB15CC00CEF638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503D81BFB15CC00CEF638 /* ViewController.swift */; };
 		E18503DC1BFB15CC00CEF638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18503DA1BFB15CC00CEF638 /* Main.storyboard */; };
@@ -14,6 +20,8 @@
 		E18503E11BFB15CC00CEF638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18503DF1BFB15CC00CEF638 /* LaunchScreen.storyboard */; };
 		E18503EC1BFB15CE00CEF638 /* SocialLoginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503EB1BFB15CE00CEF638 /* SocialLoginManagerTests.swift */; };
 		E18503F71BFB15CE00CEF638 /* SocialLoginManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503F61BFB15CE00CEF638 /* SocialLoginManagerUITests.swift */; };
+		E1C0AA3B1BFDD71200F9B9F3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */; };
+		E1C0AA3D1BFDF70C00F9B9F3 /* SocialLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */; };
 		E1F915E91BFB193000655640 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */; };
 		E1F915EA1BFB193000655640 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */; };
 		E1F915EB1BFB193000655640 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E81BFB193000655640 /* FBSDKShareKit.framework */; };
@@ -37,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E120D3841BFDC4B200A339AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
+		E120D3851BFDC4B200A339AC /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
+		E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Frameworks/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		E120D3871BFDC4B200A339AC /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
+		E120D38C1BFDC60D00A339AC /* VKSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdk.framework; path = Frameworks/VKSdk.framework; sourceTree = "<group>"; };
+		E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = VKSdkResources.bundle; path = Frameworks/VKSdkResources.bundle; sourceTree = "<group>"; };
+		E120D3921BFDCAAB00A339AC /* SocialLoginManager-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialLoginManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		E18503D31BFB15CC00CEF638 /* SocialLoginManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLoginManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18503D61BFB15CC00CEF638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18503D81BFB15CC00CEF638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +65,8 @@
 		E18503F21BFB15CE00CEF638 /* SocialLoginManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialLoginManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18503F61BFB15CE00CEF638 /* SocialLoginManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerUITests.swift; sourceTree = "<group>"; };
 		E18503F81BFB15CE00CEF638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialLoginManager.swift; path = Singletone/SocialLoginManager.swift; sourceTree = "<group>"; };
 		E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E1F915E81BFB193000655640 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -60,9 +77,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C0AA3B1BFDD71200F9B9F3 /* SafariServices.framework in Frameworks */,
 				E1F915EA1BFB193000655640 /* FBSDKLoginKit.framework in Frameworks */,
+				E120D38B1BFDC4B200A339AC /* TwitterCore.framework in Frameworks */,
+				E120D38E1BFDC60D00A339AC /* VKSdk.framework in Frameworks */,
+				E120D3891BFDC4B200A339AC /* TwitterKit.framework in Frameworks */,
 				E1F915E91BFB193000655640 /* FBSDKCoreKit.framework in Frameworks */,
 				E1F915EB1BFB193000655640 /* FBSDKShareKit.framework in Frameworks */,
+				E120D3881BFDC4B200A339AC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E120D3911BFDCA7200A339AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E18503DD1BFB15CC00CEF638 /* Assets.xcassets */,
+				E120D3921BFDCAAB00A339AC /* SocialLoginManager-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E18503CA1BFB15CC00CEF638 = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +138,13 @@
 		E18503D51BFB15CC00CEF638 /* SocialLoginManager */ = {
 			isa = PBXGroup;
 			children = (
+				E1C0AA3E1BFDF76800F9B9F3 /* Singletone */,
 				E18503D61BFB15CC00CEF638 /* AppDelegate.swift */,
 				E18503D81BFB15CC00CEF638 /* ViewController.swift */,
 				E18503DA1BFB15CC00CEF638 /* Main.storyboard */,
-				E18503DD1BFB15CC00CEF638 /* Assets.xcassets */,
 				E18503DF1BFB15CC00CEF638 /* LaunchScreen.storyboard */,
 				E18503E21BFB15CC00CEF638 /* Info.plist */,
+				E120D3911BFDCA7200A339AC /* Supporting Files */,
 			);
 			path = SocialLoginManager;
 			sourceTree = "<group>";
@@ -135,9 +167,24 @@
 			path = SocialLoginManagerUITests;
 			sourceTree = "<group>";
 		};
+		E1C0AA3E1BFDF76800F9B9F3 /* Singletone */ = {
+			isa = PBXGroup;
+			children = (
+				E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */,
+			);
+			name = Singletone;
+			sourceTree = "<group>";
+		};
 		E1F915E51BFB18B200655640 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */,
+				E120D38C1BFDC60D00A339AC /* VKSdk.framework */,
+				E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */,
+				E120D3841BFDC4B200A339AC /* Fabric.framework */,
+				E120D3851BFDC4B200A339AC /* TwitterKit.framework */,
+				E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */,
+				E120D3871BFDC4B200A339AC /* TwitterCore.framework */,
 				E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */,
 				E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */,
 				E1F915E81BFB193000655640 /* FBSDKShareKit.framework */,
@@ -155,6 +202,7 @@
 				E18503CF1BFB15CC00CEF638 /* Sources */,
 				E18503D01BFB15CC00CEF638 /* Frameworks */,
 				E18503D11BFB15CC00CEF638 /* Resources */,
+				E120D3831BFDC48900A339AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E120D38A1BFDC4B200A339AC /* TwitterKitResources.bundle in Resources */,
+				E120D38F1BFDC60D00A339AC /* VKSdkResources.bundle in Resources */,
 				E18503E11BFB15CC00CEF638 /* LaunchScreen.storyboard in Resources */,
 				E18503DE1BFB15CC00CEF638 /* Assets.xcassets in Resources */,
 				E18503DC1BFB15CC00CEF638 /* Main.storyboard in Resources */,
@@ -271,11 +321,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E120D3831BFDC48900A339AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Frameworks/Fabric.framework/run 0b6babd5705d4cc4e5ec2133d8f030c71786b3fe 353d280a39cc77a6b5ff666b4400e4935da2f6df1decca9e72669fe68860c93a";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E18503CF1BFB15CC00CEF638 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C0AA3D1BFDF70C00F9B9F3 /* SocialLoginManager.swift in Sources */,
 				E18503D91BFB15CC00CEF638 /* ViewController.swift in Sources */,
 				E18503D71BFB15CC00CEF638 /* AppDelegate.swift in Sources */,
 			);
@@ -419,14 +486,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SocialLoginManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neklo.SocialLoginManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SocialLoginManager/SocialLoginManager-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -434,14 +505,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SocialLoginManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neklo.SocialLoginManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SocialLoginManager/SocialLoginManager-Bridging-Header.h";
 			};
 			name = Release;
 		};

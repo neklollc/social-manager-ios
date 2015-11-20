@@ -7,41 +7,42 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            print("Login in")
-        } else {
-            print("Not login in")
+    }
+    
+    @IBAction func facebookLogin(sender: UIButton) {
+        SocialLoginManager.sharedInstance.facebookLogInWithReadPermissions(["public_profile"], fromViewController: self, handler: { (result) -> Void in
+                print(result.token.appID)
+            }) { (error) -> Void in
+                print("Login error: %@", error.localizedDescription)
         }
-    
-        let loginButton = FBSDKLoginButton()
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-        loginButton.center = self.view.center
-        
-        loginButton.delegate = self;
-        
-        self.view.addSubview(loginButton)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //MARK: - FBSDKLoginButtonDelegate 
-    
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        print("didCompleteWithResult")
+    @IBAction func vkontakteLogin(sender: UIButton) {
+        SocialLoginManager.sharedInstance.vkontakteLogInWithReadPermissions([VK_PER_AUDIO], fromViewController: self, handler: { (token) -> Void in
+                print(token!.accessToken)
+            })
+            { (error) -> Void in
+                print("Login error: %@", error!.localizedDescription)
+        }
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("loginButtonDidLogOut")
+    @IBAction func twitterLogin(sender: UIButton) {
+        SocialLoginManager.sharedInstance.twitterLogIn(self, handler:
+            { (session) -> Void in
+                if let session = session {
+                    print(session.authToken)
+                }
+            })
+            { (error) -> Void in
+                if let error = error {
+                    print("Login error: %@", error.localizedDescription)
+                }
+        }
     }
 }
 
