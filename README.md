@@ -10,66 +10,66 @@
 ________________________
 ## Installation Vkontakte 
 
-###Prepare
+####Prepare
 
-- [Download SDk](http://github.com/VKCOM/vk-ios-sdk)
+- [Download SDK](http://github.com/VKCOM/vk-ios-sdk)
 - Add VKSdk.framework and VKSdkResources.bundle into your project
 - If app use Swift, create Bridging Header and add #import <VKSdk/VKSdk.h>. [See guide.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html)
 - [Create VK App](http://vk.com/apps?act=manage). Type - Standalone app
 - Check permissions list in VKPermissions class in framework
 
-###Modify Info.plist
+####Modify Info.plist
 
-	- add in CFBundleURLTypes 
-	```
-		<dict>
-			<key>CFBundleURLName</key>
-			<string>vk1234567</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>vk1234567</string>
-			</array>
-		</dict>
-	```
-	
-	1234567 - ID application from [VK Developers.](https://vk.com/apps?act=manage)
-	
-	- add in LSApplicationQueriesSchemes
-	```
-		<string>vk</string>
-		<string>vk-share</string>
-		<string>vkauthorize</string>
-	```	
-	- add in NSAppTransportSecurity - NSExceptionDomains
-	```
-		<key>vk.com</key>
-		<dict>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
-			<key>NSExceptionRequiresForwardSecrecy</key>
-			<false/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
-		</dict>
-	```
-		
-###Modify AppDelegate 
+- add in CFBundleURLTypes 
 ```
-	//iOS 9 workflow
-	func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-    	VKSdk.processOpenURL(url, fromApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String)
-             
-  		return true
-	}
+	<dict>
+		<key>CFBundleURLName</key>
+		<string>vk1234567</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>vk1234567</string>
+		</array>
+	</dict>
+```
 	
-	//iOS 8 and lower
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) 	-> Bool {
-    	VKSdk.processOpenURL(url, fromApplication: sourceApplication)
-    
-		return true;
-	}
+1234567 - ID application from [VK Developers.](https://vk.com/apps?act=manage)
+	
+- add in LSApplicationQueriesSchemes
+```
+	<string>vk</string>
+	<string>vk-share</string>
+	<string>vkauthorize</string>
 ```	
-###Modify SocialLoginManager class 
+- add in NSAppTransportSecurity - NSExceptionDomains
+```
+	<key>vk.com</key>
+	<dict>
+		<key>NSExceptionAllowsInsecureHTTPLoads</key>
+		<true/>
+		<key>NSExceptionRequiresForwardSecrecy</key>
+		<false/>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+	</dict>
+```
+		
+####Modify AppDelegate 
+```
+//iOS 9 workflow
+func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+	VKSdk.processOpenURL(url, fromApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String)
+         
+	return true
+}
+
+//iOS 8 and lower
+func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) 	-> Bool {
+	VKSdk.processOpenURL(url, fromApplication: sourceApplication)
+
+	return true;
+}
+```	
+####Modify SocialLoginManager class 
 
 Change vkontakteAppID to ID application from [VK Developers.](https://vk.com/apps?act=manage)
 
@@ -79,31 +79,31 @@ ________________________
 
 At the moment SocialManager-iOS uses Fabric to work with twitter
 
-###Prepare
+####Prepare
 - If you have not used Fablic yet. You should look at [Getting Started](https://docs.fabric.io/ios/fabric/getting-started.html)
 - Use function Twitter in Fabric app. Follow the instructions
 
-###Modify AppDelegate
+####Modify AppDelegate
 ```
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-	        Fabric.with([Twitter.self])
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+        Fabric.with([Twitter.self])
 
-	        return true
-	}
+        return true
+}
 ```	
 _________________________
 
 ## Installation Facebook
 
-###Prepare
+####Prepare
 
-- [Download SDk](https://developers.facebook.com/docs/ios) 
+- [Download SDK](https://developers.facebook.com/docs/ios) 
 - [Create Facebook App](https://developers.facebook.com/apps/) 
 - Check [permissions list](https://developers.facebook.com/docs/facebook-login/permissions/v2.5)
 - Add FBSDKCoreKit, FBSDKLoginKit, FBSDKShareKit into your project
 
-###Modify Info.plist:
+####Modify Info.plist:
 
 - create in Info.plist
 ```	
@@ -149,32 +149,32 @@ _________________________
 
 1234567891234567, SocialLoginManager - AppID and AppName from [Facebook Developers.](https://developers.facebook.com/apps/)
 
-###Modify AppDelegate
+####Modify AppDelegate
 ```	
-	//iOS 9 workflow
-	func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-    	FBSDKApplicationDelegate.sharedInstance().application(app, openURL: url, sourceApplication: 			options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String, annotation: nil)
-             
-  		return true
-	}
-	
-	//iOS 8 and lower
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) 	-> Bool {
-    	 FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: 			annotation)
-    
-		return true;
-	}
-	
-	func applicationDidBecomeActive(application: UIApplication) {
-		FBSDKAppEvents.activateApp()
-	}
-	
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-		FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+//iOS 9 workflow
+func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+	FBSDKApplicationDelegate.sharedInstance().application(app, openURL: url, sourceApplication: 			options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String, annotation: nil)
+         
+	return true
+}
 
-	   	return true
-	}
+//iOS 8 and lower
+func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) 	-> Bool {
+	 FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: 			annotation)
+
+	return true;
+}
+
+func applicationDidBecomeActive(application: UIApplication) {
+	FBSDKAppEvents.activateApp()
+}
+
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+	FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+   	return true
+}
 ```	
 	
 	
