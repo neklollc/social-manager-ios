@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E120D3881BFDC4B200A339AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3841BFDC4B200A339AC /* Fabric.framework */; };
-		E120D3891BFDC4B200A339AC /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3851BFDC4B200A339AC /* TwitterKit.framework */; };
-		E120D38A1BFDC4B200A339AC /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */; };
-		E120D38B1BFDC4B200A339AC /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D3871BFDC4B200A339AC /* TwitterCore.framework */; };
-		E120D38E1BFDC60D00A339AC /* VKSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E120D38C1BFDC60D00A339AC /* VKSdk.framework */; };
-		E120D38F1BFDC60D00A339AC /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */; };
+		E16E94ED1BFF6A840072AD5D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94E51BFF6A840072AD5D /* Fabric.framework */; };
+		E16E94EE1BFF6A840072AD5D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94E61BFF6A840072AD5D /* FBSDKCoreKit.framework */; };
+		E16E94EF1BFF6A840072AD5D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94E71BFF6A840072AD5D /* FBSDKLoginKit.framework */; };
+		E16E94F01BFF6A840072AD5D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94E81BFF6A840072AD5D /* FBSDKShareKit.framework */; };
+		E16E94F11BFF6A840072AD5D /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94E91BFF6A840072AD5D /* TwitterCore.framework */; };
+		E16E94F21BFF6A840072AD5D /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94EA1BFF6A840072AD5D /* TwitterKit.framework */; };
+		E16E94F31BFF6A840072AD5D /* VKSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16E94EB1BFF6A840072AD5D /* VKSdk.framework */; };
+		E16E94F41BFF6A840072AD5D /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E16E94EC1BFF6A840072AD5D /* VKSdkResources.bundle */; };
+		E16E94F61BFF6A930072AD5D /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E16E94F51BFF6A930072AD5D /* TwitterKitResources.bundle */; };
+		E16E94F81BFF6B4A0072AD5D /* SocialLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E94F71BFF6B4A0072AD5D /* SocialLoginManager.swift */; };
 		E18503D71BFB15CC00CEF638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503D61BFB15CC00CEF638 /* AppDelegate.swift */; };
 		E18503D91BFB15CC00CEF638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503D81BFB15CC00CEF638 /* ViewController.swift */; };
 		E18503DC1BFB15CC00CEF638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18503DA1BFB15CC00CEF638 /* Main.storyboard */; };
@@ -21,10 +25,6 @@
 		E18503EC1BFB15CE00CEF638 /* SocialLoginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503EB1BFB15CE00CEF638 /* SocialLoginManagerTests.swift */; };
 		E18503F71BFB15CE00CEF638 /* SocialLoginManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18503F61BFB15CE00CEF638 /* SocialLoginManagerUITests.swift */; };
 		E1C0AA3B1BFDD71200F9B9F3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */; };
-		E1C0AA3D1BFDF70C00F9B9F3 /* SocialLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */; };
-		E1F915E91BFB193000655640 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */; };
-		E1F915EA1BFB193000655640 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */; };
-		E1F915EB1BFB193000655640 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F915E81BFB193000655640 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E120D3841BFDC4B200A339AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
-		E120D3851BFDC4B200A339AC /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
-		E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Frameworks/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		E120D3871BFDC4B200A339AC /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
-		E120D38C1BFDC60D00A339AC /* VKSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdk.framework; path = Frameworks/VKSdk.framework; sourceTree = "<group>"; };
-		E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = VKSdkResources.bundle; path = Frameworks/VKSdkResources.bundle; sourceTree = "<group>"; };
-		E120D3921BFDCAAB00A339AC /* SocialLoginManager-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialLoginManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		E16E94E51BFF6A840072AD5D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
+		E16E94E61BFF6A840072AD5D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E16E94E71BFF6A840072AD5D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E16E94E81BFF6A840072AD5D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		E16E94E91BFF6A840072AD5D /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = Frameworks/TwitterCore.framework; sourceTree = "<group>"; };
+		E16E94EA1BFF6A840072AD5D /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Frameworks/TwitterKit.framework; sourceTree = "<group>"; };
+		E16E94EB1BFF6A840072AD5D /* VKSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdk.framework; path = Frameworks/VKSdk.framework; sourceTree = "<group>"; };
+		E16E94EC1BFF6A840072AD5D /* VKSdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = VKSdkResources.bundle; path = Frameworks/VKSdkResources.bundle; sourceTree = "<group>"; };
+		E16E94F51BFF6A930072AD5D /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Frameworks/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		E16E94F71BFF6B4A0072AD5D /* SocialLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialLoginManager.swift; path = ../../SocialLoginManager.swift; sourceTree = "<group>"; };
+		E16E94F91BFF6B5D0072AD5D /* SocialLoginManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialLoginManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		E18503D31BFB15CC00CEF638 /* SocialLoginManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLoginManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18503D61BFB15CC00CEF638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18503D81BFB15CC00CEF638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +70,6 @@
 		E18503F61BFB15CE00CEF638 /* SocialLoginManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerUITests.swift; sourceTree = "<group>"; };
 		E18503F81BFB15CE00CEF638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialLoginManager.swift; path = Singletone/SocialLoginManager.swift; sourceTree = "<group>"; };
-		E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		E1F915E81BFB193000655640 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C0AA3B1BFDD71200F9B9F3 /* SafariServices.framework in Frameworks */,
-				E1F915EA1BFB193000655640 /* FBSDKLoginKit.framework in Frameworks */,
-				E120D38B1BFDC4B200A339AC /* TwitterCore.framework in Frameworks */,
-				E120D38E1BFDC60D00A339AC /* VKSdk.framework in Frameworks */,
-				E120D3891BFDC4B200A339AC /* TwitterKit.framework in Frameworks */,
-				E1F915E91BFB193000655640 /* FBSDKCoreKit.framework in Frameworks */,
-				E1F915EB1BFB193000655640 /* FBSDKShareKit.framework in Frameworks */,
-				E120D3881BFDC4B200A339AC /* Fabric.framework in Frameworks */,
+				E16E94F11BFF6A840072AD5D /* TwitterCore.framework in Frameworks */,
+				E16E94EE1BFF6A840072AD5D /* FBSDKCoreKit.framework in Frameworks */,
+				E16E94F01BFF6A840072AD5D /* FBSDKShareKit.framework in Frameworks */,
+				E16E94EF1BFF6A840072AD5D /* FBSDKLoginKit.framework in Frameworks */,
+				E16E94ED1BFF6A840072AD5D /* Fabric.framework in Frameworks */,
+				E16E94F31BFF6A840072AD5D /* VKSdk.framework in Frameworks */,
+				E16E94F21BFF6A840072AD5D /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +108,8 @@
 		E120D3911BFDCA7200A339AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E16E94F91BFF6B5D0072AD5D /* SocialLoginManager-Bridging-Header.h */,
 				E18503DD1BFB15CC00CEF638 /* Assets.xcassets */,
-				E120D3921BFDCAAB00A339AC /* SocialLoginManager-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 		E18503D51BFB15CC00CEF638 /* SocialLoginManager */ = {
 			isa = PBXGroup;
 			children = (
-				E1C0AA3E1BFDF76800F9B9F3 /* Singletone */,
+				E16E94F71BFF6B4A0072AD5D /* SocialLoginManager.swift */,
 				E18503D61BFB15CC00CEF638 /* AppDelegate.swift */,
 				E18503D81BFB15CC00CEF638 /* ViewController.swift */,
 				E18503DA1BFB15CC00CEF638 /* Main.storyboard */,
@@ -167,27 +167,19 @@
 			path = SocialLoginManagerUITests;
 			sourceTree = "<group>";
 		};
-		E1C0AA3E1BFDF76800F9B9F3 /* Singletone */ = {
-			isa = PBXGroup;
-			children = (
-				E1C0AA3C1BFDF70C00F9B9F3 /* SocialLoginManager.swift */,
-			);
-			name = Singletone;
-			sourceTree = "<group>";
-		};
 		E1F915E51BFB18B200655640 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E16E94F51BFF6A930072AD5D /* TwitterKitResources.bundle */,
+				E16E94E51BFF6A840072AD5D /* Fabric.framework */,
+				E16E94E61BFF6A840072AD5D /* FBSDKCoreKit.framework */,
+				E16E94E71BFF6A840072AD5D /* FBSDKLoginKit.framework */,
+				E16E94E81BFF6A840072AD5D /* FBSDKShareKit.framework */,
+				E16E94E91BFF6A840072AD5D /* TwitterCore.framework */,
+				E16E94EA1BFF6A840072AD5D /* TwitterKit.framework */,
+				E16E94EB1BFF6A840072AD5D /* VKSdk.framework */,
+				E16E94EC1BFF6A840072AD5D /* VKSdkResources.bundle */,
 				E1C0AA3A1BFDD71200F9B9F3 /* SafariServices.framework */,
-				E120D38C1BFDC60D00A339AC /* VKSdk.framework */,
-				E120D38D1BFDC60D00A339AC /* VKSdkResources.bundle */,
-				E120D3841BFDC4B200A339AC /* Fabric.framework */,
-				E120D3851BFDC4B200A339AC /* TwitterKit.framework */,
-				E120D3861BFDC4B200A339AC /* TwitterKitResources.bundle */,
-				E120D3871BFDC4B200A339AC /* TwitterCore.framework */,
-				E1F915E61BFB193000655640 /* FBSDKCoreKit.framework */,
-				E1F915E71BFB193000655640 /* FBSDKLoginKit.framework */,
-				E1F915E81BFB193000655640 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -297,11 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E120D38A1BFDC4B200A339AC /* TwitterKitResources.bundle in Resources */,
-				E120D38F1BFDC60D00A339AC /* VKSdkResources.bundle in Resources */,
 				E18503E11BFB15CC00CEF638 /* LaunchScreen.storyboard in Resources */,
 				E18503DE1BFB15CC00CEF638 /* Assets.xcassets in Resources */,
 				E18503DC1BFB15CC00CEF638 /* Main.storyboard in Resources */,
+				E16E94F41BFF6A840072AD5D /* VKSdkResources.bundle in Resources */,
+				E16E94F61BFF6A930072AD5D /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C0AA3D1BFDF70C00F9B9F3 /* SocialLoginManager.swift in Sources */,
+				E16E94F81BFF6B4A0072AD5D /* SocialLoginManager.swift in Sources */,
 				E18503D91BFB15CC00CEF638 /* ViewController.swift in Sources */,
 				E18503D71BFB15CC00CEF638 /* AppDelegate.swift in Sources */,
 			);

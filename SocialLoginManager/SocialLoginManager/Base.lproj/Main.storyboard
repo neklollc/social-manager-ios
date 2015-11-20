@@ -19,42 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOh-PU-GUa">
-                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <rect key="frame" x="20" y="348" width="560" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Vkontakt"/>
                                 <connections>
                                     <action selector="vkontakteLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSv-7E-gGg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-ni-XK5">
-                                <rect key="frame" x="20" y="512" width="560" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Twitter"/>
-                                <connections>
-                                    <action selector="twitterLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3e9-Sz-83Z"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-u6-W5a">
-                                <rect key="frame" x="20" y="474" width="560" height="30"/>
+                                <rect key="frame" x="20" y="222" width="560" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Facebook"/>
                                 <connections>
                                     <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pK3-Lr-xrG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-ni-XK5">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="twitterLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3e9-Sz-83Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aoq-u6-W5a" firstAttribute="leading" secondItem="iQq-ni-XK5" secondAttribute="leading" id="AeO-k8-oyf"/>
-                            <constraint firstItem="iQq-ni-XK5" firstAttribute="leading" secondItem="wOh-PU-GUa" secondAttribute="leading" id="MvK-vL-SO9"/>
-                            <constraint firstItem="aoq-u6-W5a" firstAttribute="trailing" secondItem="iQq-ni-XK5" secondAttribute="trailing" id="PRG-eh-2L6"/>
-                            <constraint firstAttribute="bottom" secondItem="wOh-PU-GUa" secondAttribute="bottom" constant="20" symbolic="YES" id="V3O-e2-oHb"/>
-                            <constraint firstItem="wOh-PU-GUa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YtY-Hf-xt4"/>
-                            <constraint firstItem="iQq-ni-XK5" firstAttribute="top" secondItem="aoq-u6-W5a" secondAttribute="bottom" constant="8" symbolic="YES" id="cv8-C9-sha"/>
-                            <constraint firstItem="wOh-PU-GUa" firstAttribute="top" secondItem="iQq-ni-XK5" secondAttribute="bottom" constant="8" symbolic="YES" id="eFc-OU-psc"/>
-                            <constraint firstItem="iQq-ni-XK5" firstAttribute="trailing" secondItem="wOh-PU-GUa" secondAttribute="trailing" id="tpR-0D-35v"/>
-                            <constraint firstItem="wOh-PU-GUa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wOK-gC-A5E"/>
+                            <constraint firstItem="aoq-u6-W5a" firstAttribute="trailing" secondItem="iQq-ni-XK5" secondAttribute="trailing" id="GTn-OW-miF"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="trailing" secondItem="iQq-ni-XK5" secondAttribute="trailing" id="XCj-at-8hn"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e6X-sh-mPn"/>
+                            <constraint firstItem="aoq-u6-W5a" firstAttribute="leading" secondItem="iQq-ni-XK5" secondAttribute="leading" id="hRH-jI-2qG"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="top" secondItem="iQq-ni-XK5" secondAttribute="bottom" constant="33" id="poD-Ps-fLn"/>
+                            <constraint firstItem="wOh-PU-GUa" firstAttribute="leading" secondItem="iQq-ni-XK5" secondAttribute="leading" id="t4Q-SS-VCQ"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xL6-EW-Xw0"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="top" secondItem="aoq-u6-W5a" secondAttribute="bottom" constant="33" id="z32-02-RY2"/>
+                            <constraint firstItem="iQq-ni-XK5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zh4-Vv-y7a"/>
                         </constraints>
                     </view>
                 </viewController>
