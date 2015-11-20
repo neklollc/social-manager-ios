@@ -15,7 +15,7 @@ public class SocialLoginManager: NSObject {
     
     static let sharedInstance = SocialLoginManager()
     
-    let vkontakteAppID = "5154433"
+    let vkontakteAppID = "1234567"
     
     public typealias SocialLoginManagerFacevookSuccessBlock = (FBSDKLoginManagerLoginResult!) -> Void
     public typealias SocialLoginManagerFacevookErrorBlock = (NSError!) -> Void

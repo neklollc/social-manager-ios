@@ -22,16 +22,16 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>vk5154433</string>
+			<string>vk1234567</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vk5154433</string>
+				<string>vk1234567</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1046086408769315</string>
+				<string>fb1234567891234567</string>
 			</array>
 		</dict>
 	</array>
@@ -57,7 +57,7 @@
 		</array>
 	</dict>
 	<key>FacebookAppID</key>
-	<string>1046086408769315</string>
+	<string>1234567891234567</string>
 	<key>FacebookDisplayName</key>
 	<string>SocialLoginManager</string>
 	<key>LSApplicationQueriesSchemes</key>
