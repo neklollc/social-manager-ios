@@ -4,7 +4,7 @@
 
 ## How To Get Started
 
-- [Download SocialManager-iOS](https://github.com/neklollc/social-manager-ios/archive/master.zip) and add your project
+- [Download SocialManager-iOS](https://github.com/neklollc/social-manager-ios/archive/master.zip) and add into your project
 - Add SafariServices.framework into your project. [See guide.](https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html)
 
 ________________________
@@ -15,6 +15,10 @@ ________________________
 - [Download SDK](http://github.com/VKCOM/vk-ios-sdk)
 - Add VKSdk.framework and VKSdkResources.bundle into your project
 - If app use Swift, create Bridging Header and add #import <VKSdk/VKSdk.h>. [See guide.](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html)
+- Add to Bridging Header
+```
+	#import <VKSdk/VKSdk.h>
+```
 - [Create VK App](http://vk.com/apps?act=manage). Type - Standalone app
 - Check permissions list in VKPermissions class in framework
 
@@ -86,10 +90,9 @@ At the moment SocialManager-iOS uses Fabric to work with twitter
 ####Modify AppDelegate
 ```
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    
-        Fabric.with([Twitter.self])
+	Fabric.with([Twitter.self])
 
-        return true
+	return true
 }
 ```	
 _________________________
@@ -170,7 +173,6 @@ func applicationDidBecomeActive(application: UIApplication) {
 }
 
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    
 	FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
    	return true
